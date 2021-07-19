@@ -1,0 +1,10 @@
+MODEL_SAVE_DIR = "/mnt/fs5/nclkong/robust_imagenet_trained/models/"
+TORCH_HOME = "/mnt/fs5/nclkong/torch_models/"
+STRINGER_DATASET_STIM = "/mnt/fs5/nclkong/stringer_dataset/images_natimg2800_all.mat"
+STRINGER_DATASET_RESP = "/mnt/fs5/nclkong/stringer_dataset/natimg2800_M170717_MP033_2017-08-20.mat"
+CADENA_NATURAL_DATASET_STIM = "/mnt/fs5/nclkong/cadena_dataset/data_by_img_type/original_stim.npy"
+CADENA_NATURAL_DATASET_RESP = "/mnt/fs5/nclkong/cadena_dataset/data_by_img_type/original_responses.npy"
+CADENA_ALL_DATASET_STIM = "/mnt/fs5/nclkong/cadena_dataset/data_by_img_type/all_stim_images.npy"
+CADENA_ALL_DATASET_RESP = "/mnt/fs5/nclkong/cadena_dataset/data_by_img_type/all_stim_responses.npy"
+CADENA_RAW_DATA = "/mnt/fs5/nclkong/cadena_dataset/data_binned_responses/cadena_ploscb_data.pkl"
+
