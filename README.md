@@ -1,5 +1,7 @@
 ## Robustness and Macaque Primary Visual Cortex
 
+Our preprint is located here: https://www.biorxiv.org/content/10.1101/2021.06.29.450334v1
+
 To install the repository, follow these steps:
 1. Create a virtual environment for this project (for example): `python3.6 -m venv robust_v1_env`
 2. Activate the environment: `source robust_v1_env/bin/activate`
