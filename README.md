@@ -41,7 +41,7 @@ responses to natural scenes.  The results are saved in `robust_spectrum/eig_anal
 ### Computing Power Law Exponents of Artificial Neural Responses
 
 1. `cd robust_spectrum/eig_analysis`
-2. Run (for example): `CUDA_VISIBLE_DEVICES=0 python eigen_analysis_wrapper.py` --model-arch alexnet 
+2. Run (for example): `CUDA_VISIBLE_DEVICES=0 python eigen_analysis_wrapper.py --model-arch alexnet 
 --stim-dataset imagenet --imagenet-dir /PATH/TO/IMAGENET/VAL/ --num-subsets 3 --results-dir ./ --trained`
 
 The above command would use GPU 0 to extract features from a trained AlexNet in response to a set of ImageNet 
