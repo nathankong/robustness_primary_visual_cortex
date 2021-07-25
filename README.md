@@ -13,11 +13,14 @@ of your data.
 7. Navigate to `robust_spectrum/configs/` and modify the directories found in each configuration file 
 if training models is desired (read the description at the top of the configuration file first).
 
+Note: In the below, `/PATH/TO/IMAGENET/` is a directory containing the ImageNet images in JPEG format.
+The directory structure is: `/PATH/TO/IMAGENET/{train,val}/CATEGORIES/*.JPEG`.
+
 ### Neural Predictions on Macaque V1 data
 
 1. `cd robust_spectrum/neural_predictions`
 2. Run (for example): `CUDA_VISIBLE_DEVICES=0 python neural_fit_wrapper.py --neural-dataset cadena_all 
---num-splits 20 --results-dir ./ --imagenet-dir /PATH/TO/IMAGENET/VAL/ --model-arch alexnet --map-type pls 
+--num-splits 20 --results-dir ./ --imagenet-dir /PATH/TO/IMAGENET/ --model-arch alexnet --map-type pls 
 --memmap-dir ./ --njobs 5 --trained`
 
 The above command would use GPU 0 to extract features from a trained AlexNet.  Twenty train-test splits would 
@@ -42,7 +45,7 @@ responses to natural scenes.  The results are saved in `robust_spectrum/eig_anal
 
 1. `cd robust_spectrum/eig_analysis`
 2. Run (for example): `CUDA_VISIBLE_DEVICES=0 python eigen_analysis_wrapper.py --model-arch alexnet 
---stim-dataset imagenet --imagenet-dir /PATH/TO/IMAGENET/VAL/ --num-subsets 3 --results-dir ./ --trained`
+--stim-dataset imagenet --imagenet-dir /PATH/TO/IMAGENET/ --num-subsets 3 --results-dir ./ --trained`
 
 The above command would use GPU 0 to extract features from a trained AlexNet in response to a set of ImageNet 
 images. Three random subsets from the ImageNet validation set would be used to obtain three different power 
@@ -71,7 +74,7 @@ of preferred spatial frequencies.
 
 1. `cd robust_spectrum/robustness_eval`
 2. Run the command: `CUDA_VISIBLE_DEVICES=0 python imagenet_robustness.py --type Linf --model-arch alexnet
---imagenet-dir /PATH/TO/IMAGENET/VAL/ --trained --results-dir ./`
+--imagenet-dir /PATH/TO/IMAGENET/ --trained --results-dir ./`
 
 This would compute the adversarial robustness of a trained AlexNet using all 50000 ImageNet validation set
 images against L-inf perturbations of norms: `[0., 1./1020, 1./255, 4./255]`. If `--type` is set to `L2`,
